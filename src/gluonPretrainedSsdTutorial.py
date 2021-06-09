@@ -2,6 +2,7 @@ from gluoncv import model_zoo, data, utils
 from matplotlib import pyplot as plt
 
 def run(fname):
+    print('SSD')
     net = model_zoo.get_model('ssd_512_resnet50_v1_voc', pretrained=True)
 
     # im_fname = utils.download('https://github.com/dmlc/web-data/blob/master/gluoncv/detection/street_small.jpg?raw=true',
