@@ -1,3 +1,5 @@
+import json
+import numpy
 from gluonPretrainedFasterRcnn import run as runRcnn
 from gluonPretrainedSsdTutorial import run as runSsd
 from gluonPretrainedYolo import run as runYolo
@@ -7,7 +9,7 @@ from matplotlib import pyplot as plt
 from gluoncv import utils
 
 script_dir = os.path.dirname(__file__) #<-- absolute dir the script is in
-rel_path = "../testdata/parkingoutside2-rotated.jpg"
+rel_path = "../testdata/3parkedcars-noWindowInterference-rotated.jpg"
 abs_file_path = os.path.join(script_dir, rel_path)
 
 with open(abs_file_path, 'rb') as fp:
@@ -18,6 +20,13 @@ image = mx.img.imdecode(str_image)
 # runRcnn(abs_file_path)
 # runYolo(abs_file_path)
 class_IDs, scores, bounding_boxes, net_class_names, transformed_image = runSsd(image)
+ids = class_IDs[0]
+numpyarray = class_IDs.asnumpy()
 
-ax = utils.viz.plot_bbox(transformed_image, bounding_boxes[0], scores[0], class_IDs[0], class_names=net_class_names)
-plt.show()
+output = json.dumps({
+    "ids":numpyarray.tolist()
+})
+
+a = 1
+# ax = utils.viz.plot_bbox(transformed_image, bounding_boxes[0], scores[0], class_IDs[0], class_names=net_class_names)
+# plt.show()

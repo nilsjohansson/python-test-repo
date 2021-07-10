@@ -1,0 +1,64 @@
+Möte Måndag 06-14
+Visa findings
+Visa algoritm idé
+
+Diskutera
+Vad visar vi för kunden som de vill ha?
+	Överskjutande parkeringstid i timmar, minuter och sekunder
+	Färgade prickar på en karta
+	I en app
+
+	Områden med fler bilar än max tillåtna
+	Parkerande bilar kan få veta lediga platser
+
+Slogan: "Automatisk parkeringsövervakning, utan behov av omfattande installation"
+
+Hårdvara
+	Inga problem för prototyp
+	
+
+Vilka svagheter har vår lösning? Håller det?
+	De har inte sin data tillgänglig
+	Bilderna får inte gå att intercepta
+	Är det olagligt?
+	Hur funkar det i mörker
+	GDPR
+
+Vilka är kunderna?
+	Leta fram vår main target
+Vilka är konkurrenterna?
+	Googlat lite
+
+Vad behövs för ett Proof of concept för oss själva? 
+Vad skulle behövas för ett demo, vilka komponenter?
+	En "kamera-installation", 
+	en server med api som 
+		tar emot bilderna 
+		tar emot parkeringsdata från systemet per parkeringsområde
+		publicerar en lista med pågående parkeringar på parkeringsområdet
+		kan administrera parkeringsområden och kameror
+	en app som visar områden med parkeringsförseningar
+	en webbsida för att administrera sina områden
+
+Hur presenterar vi det här?
+	Vi behöver statistik:
+		Vad kostar AimoPark för en BRF?
+		Totala böter hela sverige. 800 Mkr i Sverige
+		Marknadens storlek
+		Prata om öde parkeringar
+		Miljöaspekt
+		Snabbare responstid
+		Kan agera innan parkeringsägare ringer
+
+Hur skyddar vi det här?
+	Tjäna pengar innan någon annan gör det.
+
+Hur tar vi betalt för det här?
+	Sälja hela lösnigen med kod.
+	Hosta servicen
+	Ängelinvesterare
+
+Kuriosa
+	Se dokumentär
+	Sätt up taskboard
+	Mer data för tester
