@@ -4,7 +4,7 @@ from mxnet.ndarray.ndarray import NDArray
 from matplotlib import pyplot as plt
 import numpy
 
-def run(imageArray) -> Tuple[NDArray, NDArray, NDArray, NDArray, numpy.ndarray]:
+def run(imageArray):
     print('SSD')
     # Need a way to keep this model locally, it now downloads every run
     
